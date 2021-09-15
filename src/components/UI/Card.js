@@ -1,4 +1,4 @@
-import styles from './Card.module.css';
+import styles from '../../styles/UI/Card/Card.module.css';
 
 const Cart = (props) => {
     return(
