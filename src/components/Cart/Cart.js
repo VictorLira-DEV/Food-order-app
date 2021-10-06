@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import styles from "../../styles/Cart/Cart.module.css";
 import Modal from "../UI/Modal";
-import CartContext from "../../store/card-context";
+import CartContext from "../../store/cart-context";
 import CartItem from "./CartItem";
 
 const Cart = (props) => {
@@ -9,9 +9,13 @@ const Cart = (props) => {
     const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
     const hasItems = cartCtx.items.length > 0;
 
-    const cartItemRemoveHandler = (id) => {};
+    const cartItemRemoveHandler = (id) => {
+        cartCtx.removeItem(id)
+    };
 
-    const cartItemAddHandler = (item) => {};
+    const cartItemAddHandler = (item) => {
+        cartCtx.addItem({...item, amount: 1})
+    };
 
     const cartitems = (
         <ul className={styles["cart-items"]}>
@@ -22,7 +26,7 @@ const Cart = (props) => {
                     amount={item.amount}
                     price={item.price}
                     onRemove={cartItemRemoveHandler.bind(null, item.id)}// bind pre configura para execuções futuras
-                    onAdd={cartItemAddHandler.bind(null, item.id) }
+                    onAdd={cartItemAddHandler.bind(null, item) }
                 />
             ))}
         </ul>
