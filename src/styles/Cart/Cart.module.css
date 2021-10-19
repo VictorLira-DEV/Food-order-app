@@ -5,21 +5,26 @@
     max-height: 20rem;
     overflow: scroll;
 }
-  
-  .total {
+
+.error-message{
+  text-align: center;
+  color: red;
+}
+
+.total {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
     font-size: 1.5rem;
     margin: 1rem 0;
-  }
-  
-  .actions {
+}
+
+.actions {
     text-align: right;
-  }
-  
-  .actions button {
+}
+
+.actions button {
     font: inherit;
     cursor: pointer;
     background-color: transparent;
@@ -27,20 +32,20 @@
     padding: 0.5rem 2rem;
     border-radius: 25px;
     margin-left: 1rem;
-  }
-  
-  .actions button:hover,
-  .actions button:active {
+}
+
+.actions button:hover,
+.actions button:active {
     background-color: #5a1a01;
     border-color: #5a1a01;
     color: white;
-  }
-  
-  .actions .button--alt {
+}
+
+.actions .button--alt {
     color: #8a2b06;
-  }
-  
-  .actions .button {
+}
+
+.actions .button {
     background-color: #8a2b06;
     color: white;
-  }
+}
