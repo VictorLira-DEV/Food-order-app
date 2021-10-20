@@ -48,9 +48,9 @@ const Cart = (props) => {
                 throw new Error("something went wrong");
             }
 
-            const data = await response.json();
             setIsSubmitting(false);
             setDidSubmit(true);
+            cartCtx.clearCart()
         } catch (error) {
             setHttpError({
                 isTrue: true,
@@ -109,11 +109,17 @@ const Cart = (props) => {
     );
 
     const isSubmittingModalContent = <p>Sending order data</p>;
-    const didSubmitModalContent = <p> Successfully sent the order </p>;
+    const didSubmitModalContent = <React.Fragment>
+        <p>Successfully sent the order </p>
+        <div className={styles.actions}>
+            <button className={styles.button} onClick={props.onClose}>
+                Close
+            </button>
+        </div>
+    </React.Fragment>
 
     return (
         <Modal onClose={props.onClose}>
-            {console.log(!isSubmitting)}
             {!isSubmitting && !didSubmit && cartModalContent}
             {isSubmitting && isSubmittingModalContent}
             {!isSubmitting && didSubmit && didSubmitModalContent}
