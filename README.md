@@ -29,7 +29,7 @@
 
 
  ## 📓 About
-This app was developed in <a href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/"> React JS course</a> , it simulates the operation of fast food app with form validation, food menu, I used firebase to read and store orders
+This app was developed in <a href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/"> React JS course</a> , it simulates the operation of fast food app with form validation, food menu, I used firebase to read and store orders, and I used context API to manage state
  ## :rocket: Technologies used:
 <p align="center">
 	<img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" alt="react" width="70" height="70"/>
